@@ -3,8 +3,8 @@ from npc import NPC
 
 client = OpenAI()
 
-region = "Numenor"
-room = "Tavern"
+region = "Knoxville"
+room = "Porn shop"
 
 def generate_npc(region, room):
     response = client.chat.completions.create(
@@ -12,7 +12,7 @@ def generate_npc(region, room):
         messages=[
             {"role": "system", "content": "You are a fantasy npc generator."},
             {"role": "user", "content": "region=Shire from Lord of the Rings, room=Bilbo's house"},
-            {"role": "assistant", "content": "name=Frodo\nrace=hobbit\nage=60\nwearing=green elven cloak\nwielding=Sting the Elven dagger"},
+            {"role": "assistant", "content": "name=Frodo\nrace=hobbit\nage=60\nwearing=green elven cloak\nwielding=Sting the Elven dagger\nbackground story=Frodo is Bilbo's nephew. He is young and eager for adventure. He has a bunch of good friends."},
             {"role": "user", "content": f"region={region}, room={room}"}
         ]
     )
